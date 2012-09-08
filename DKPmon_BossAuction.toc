@@ -1,4 +1,4 @@
-## Interface: 40300
+## Interface: 50001
 ## Title: DKPmon_BossAuction
 ## Author: Javek
 ## X-Credits: Eraslin - now maintained by Guild Launch

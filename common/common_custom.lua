@@ -409,7 +409,7 @@ local deformat = DKPmonBA.deformat
 	function DKPmonBA:CheckLeaderSetup()
 		if self:DkpSystemInactive() then return end
 		self:Debug("CheckLeaderSetup()")
-		if GetNumRaidMembers() == 0 then
+		if IsInRaid() == false then
 			--Print log reminder
 			local currentLog = DKPmon.Logging:GetCurrentLog()
 			if currentLog ~= nil then
@@ -466,7 +466,7 @@ local deformat = DKPmonBA.deformat
 		if not DKPmon:GetLeaderState() then return end
 		 
 		local mydb = DKPmon.DKP:GetDB("BossAuction")
-		if mydb.autoMasterLoot and GetNumRaidMembers() > 0 then
+		if mydb.autoMasterLoot and GetNumGroupMembers() > 0 then
 			--and IsRaidLeader() then
 			--MasterLoot check
 			
